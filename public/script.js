@@ -3,6 +3,9 @@ const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
 const backBtn = document.querySelector(".header__back");
+const dotenv = require("dotenv");
+
+dotenv.config();
 myVideo.muted = true;
 
 backBtn.addEventListener("click", () => {
