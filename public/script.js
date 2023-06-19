@@ -3,9 +3,9 @@ const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
 const backBtn = document.querySelector(".header__back");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 
-dotenv.config();
+// dotenv.config();
 myVideo.muted = true;
 
 backBtn.addEventListener("click", () => {
@@ -26,10 +26,11 @@ const user = prompt("Enter your name");
 
 var peer = new Peer({
    //host: '127.0.0.1',
-  //host: 'https://cuong-metacrew-chatapp.onrender.com',
+  host: 'https://cuong-metacrew-chatapp.onrender.com',
+  port: 5000,
   //port: 3030,
-  host: process.env.HOST,
-  port: process.env.PORT,
+  // host: process.env.HOST,
+  // port: process.env.PORT,
   path: '/peerjs',
   config: {
     'iceServers': [
