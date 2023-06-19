@@ -22,7 +22,8 @@ showChat.addEventListener("click", () => {
 const user = prompt("Enter your name");
 
 var peer = new Peer({
-  host: '127.0.0.1',
+  // host: '127.0.0.1',
+  host: 'https://cuong-metacrew-chatapp.onrender.com',
   port: 3030,
   path: '/peerjs',
   config: {
