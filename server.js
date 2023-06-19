@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
+const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
@@ -13,6 +14,7 @@ const opinions = {
   debug: true,
 }
 
+app.use(cors());
 app.use("/peerjs", ExpressPeerServer(server, opinions));
 app.use(express.static("public"));
 
